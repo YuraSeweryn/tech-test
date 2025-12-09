@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "bdb07f84-fc4e-4739-ad2d-f3f3b3e09a0e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26870523"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/orders/?orderId=180a1c2f-b080-41d0-7824-93e7039b9b79",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						""
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "180a1c2f-b080-41d0-7824-93e7039b9b79"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/orders/GetByStatus/Failed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						"GetByStatus",
+						"Failed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profit",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"year\": 2024,\r\n    \"month\": 1,\r\n    \"monthName\": \"January\",\r\n    \"orderCount\": 5,\r\n    \"totalCost\": 1000.00,\r\n    \"totalPrice\": 1500.00,\r\n    \"profit\": 500.00\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "GET http://localhost:8000/orders/Profit",
+					"protocol": "GET http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						"Profit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateOrderStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/orders/UpdateStatus/180a1c2f-b080-41d0-7824-93e7039b9b79?statusName=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						"UpdateStatus",
+						"180a1c2f-b080-41d0-7824-93e7039b9b79"
+					],
+					"query": [
+						{
+							"key": "statusName",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

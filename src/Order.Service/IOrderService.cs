@@ -10,5 +10,13 @@ namespace Order.Service
         Task<IEnumerable<OrderSummary>> GetOrdersAsync();
         
         Task<OrderDetail> GetOrderByIdAsync(Guid orderId);
+
+        Task<IEnumerable<OrderSummary>> GetOrdersByStatusAsync(string statusName);
+
+        Task<OrderSummary> UpdateOrderStatusAsync(Guid orderId, string statusName);
+
+        Task<OrderDetail> CreateOrderAsync(CreateOrderRequest request);
+
+        Task<IEnumerable<MonthlyProfit>> GetMonthlyProfitAsync();
     }
 }
